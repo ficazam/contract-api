@@ -1,5 +1,5 @@
 {
-  "name": "@ficazam/contract-api",
+  "name": "@ficazam31/contract-api",
   "version": "0.1.0",
   "description": "Contract-first HTTP client with runtime validation and compiler-hostile call signatures.",
   "license": "MIT",
