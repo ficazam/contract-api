@@ -8,7 +8,7 @@ This library is intentionally strict. If something can go wrong, the compiler sh
 
 ## What this is
 
-`@ficazam/contract-api` is a **TypeScript-first API client generator** built around runtime schemas (Zod, Valibot, etc.).
+`@ficazam/contract-api` is a **TypeScript-first API client generator** built around runtime schemas (Zod, etc.).
 
 You define an API **contract map** once, and you get:
 
@@ -45,7 +45,7 @@ Most HTTP clients are:
 
 This library takes the opposite stance:
 
-> **If an API call is invalid, it should not compile.**
+> **If an API call is invalid, it will not compile.**
 
 That includes:
 
