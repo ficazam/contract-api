@@ -1,0 +1,41 @@
+{
+  "name": "@ficazam/contract-api",
+  "version": "0.1.0",
+  "description": "Contract-first HTTP client with runtime validation and compiler-hostile call signatures.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:types": "tsd --files test/**/*.test-d.ts",
+    "lint:types": "tsc -p tsconfig.lint.json --noEmit",
+    "prepublishOnly": "npm run build && npm run lint:types && npm run test && npm run test:types"
+  },
+  "peerDependencies": {
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsd": "^0.33.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.16",
+    "zod": "^3.0.0"
+  }
+}
